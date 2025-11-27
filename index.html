@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lojão Agro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- FACHADA -->
+  <header class="fachada">
+    <img src="fachada.png" class="fachada-img" alt="">
+  </header>
+
+  <!-- MENU FIXO -->
+  <nav class="menu">
+    <ul>
+      <li><button class="menu-btn active" data-cat="all">🌾 Todos</button></li>
+      <li><button class="menu-btn" data-cat="racao">🐄 Rações</button></li>
+      <li><button class="menu-btn" data-cat="sementes">🌱 Sementes</button></li>
+      <li><button class="menu-btn" data-cat="fertilizante">🧪 Fertilizantes</button></li>
+      <li><button class="menu-btn" data-cat="epi">🦺 EPIs</button></li>
+      <li><button class="menu-btn" data-cat="ferramenta">🛠 Ferramentas</button></li>
+      <li><button class="menu-btn" data-cat="medicamento">💊 Medicamentos</button></li>
+    </ul>
+  </nav>
+
+  <!-- CONTROLS -->
+  <section class="controls">
+    <input id="searchInput" type="search" placeholder="Buscar produto...">
+    <div id="resultMeta" class="result-meta"></div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <main>
+    <h2 class="section-title">Produtos</h2>
+    <section class="grid" id="prodGrid"></section>
+    <div id="emptyState" class="empty-state" hidden>Nenhum produto encontrado.</div>
+  </main>
+
+  <!-- MODAL DE PRODUTO -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <img id="modalImg">
+      <h2 id="modalName"></h2>
+      <p id="modalPrice"></p>
+      <button id="modalWaBtn" class="btn">Pedir pelo WhatsApp</button>
+    </div>
+  </div>
+
+
+
+  <footer class="site-footer">
+    © <span id="ano"></span> Lojão Agro — Todos os direitos reservados
+  </footer>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<button id="waFab" class="whatsapp-fab">
+  <svg viewBox="0 0 32 32" width="28" height="28">
+    <path fill="white" d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.64.84 5.12 2.24 7.16L4 29l7-2.24c1.92 1.04 4.16 1.6 6.36 1.6 6.64 0 12.04-5.4 12.04-12.04C29.4 8.4 22.68 3 16.04 3zm7.04 16.92c-.32.92-1.84 1.72-2.52 1.84-.68.12-1.08.12-1.84-.12-.44-.16-1-.32-1.72-.64-3.04-1.48-5.04-4.88-5.2-5.12-.16-.24-1.24-1.64-1.24-3.12 0-1.48.76-2.2 1.04-2.52.28-.32.6-.4.8-.4h.6c.2 0 .44 0 .64.48.24.56.84 1.96.92 2.12.08.16.12.36.04.52-.08.16-.12.24-.24.4-.12.16-.24.28-.36.44-.12.16-.24.32-.12.6.12.28.56 1.36 1.2 2.2.84 1.16 1.52 1.52 1.8 1.68.28.16.44.12.6-.04.16-.16.68-.8.84-1.08.16-.28.36-.24.6-.16.24.08 1.52.72 1.76.84.24.12.4.2.48.32.08.12.08.92-.24 1.84z"/>
+  </svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
